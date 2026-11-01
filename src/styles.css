@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
+  --font-sans: "Outfit", "Avenir Next", system-ui, sans-serif;
+
+  --color-bg: #f4efe6;
+  --color-fg: #1c1915;
+  --color-muted: #6e665c;
+  --color-accent: #0f5e56;
+  --color-surface: #fbf8f3;
+  --color-ink: #141210;
+  --color-line: #ddd4c6;
+
+  --text-hero: clamp(2.85rem, 8vw, 6.6rem);
+  --text-hero--line-height: 0.9;
+  --text-hero--letter-spacing: -0.035em;
+  --text-hero--font-weight: 500;
+
+  --text-section: clamp(2.05rem, 4vw, 3.35rem);
+  --text-section--line-height: 1.02;
+  --text-section--letter-spacing: -0.03em;
+  --text-section--font-weight: 500;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: clip;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 560ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+.rise-2 {
+  animation-delay: 90ms;
+}
+
+.rise-3 {
+  animation-delay: 180ms;
+}
+
+.rise-4 {
+  animation-delay: 270ms;
+}
+
+.aspect-plate {
+  aspect-ratio: 3 / 2;
+}
+
+.aspect-banner {
+  aspect-ratio: 2 / 1;
+}
+.project-veil {
+  opacity: 1;
+  transform: none;
+}
+
+.project-photo {
+  scale: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-veil {
+    opacity: 0;
+    transform: translateY(0.65rem);
+    transition:
+      opacity 200ms ease,
+      transform 200ms ease;
+  }
+
+  .project-card:hover .project-veil,
+  .project-card:focus-visible .project-veil {
+    opacity: 1;
+    transform: none;
+  }
+
+  .project-photo {
+    transition: scale 500ms ease;
+  }
+
+  .project-card:hover .project-photo,
+  .project-card:focus-visible .project-photo {
+    scale: 1.035;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .rise,
+  .rise-2,
+  .rise-3,
+  .rise-4 {
+    animation: none;
+  }
+
+  .project-veil,
+  .project-photo {
+    transition: none;
+  }
+}

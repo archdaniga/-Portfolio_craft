@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Daniel Nigatu — Portfolio",
+      "hasCanvas": false,
+      "bodyTextLen": 3240,
+      "bodyTextHash": "ae6f56a9390a0088d4755a48670797332831924939faaa6a14111cbdc1261f09",
+      "bodyTextPrefix": "Daniel Nigatu Work About Practice Note STUDIO INDEX · ADDIS ABAB",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Daniel Nigatu — Portfolio",
+      "hasCanvas": false,
+      "bodyTextLen": 3220,
+      "bodyTextHash": "eff7f6bf0dedbb1ab7cb031e914f6ddc33c94b4c4ecd14753a38fc7b14afa637",
+      "bodyTextPrefix": "Daniel Nigatu Menu STUDIO INDEX · ADDIS ABABA Rooms, marks, and ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Daniel Nigatu">
+  <rect width="32" height="32" rx="4" fill="#F4EFE6"/>
+  <path fill="#1C1915" d="M6.5 6h4.6v7.2L20.9 6H25.5v18.5h-4.6v-7.2L11.1 24.5H6.5V6z"/>
+  <rect x="6.5" y="25.8" width="19" height="1.8" fill="#0F5E56"/>
+</svg>
